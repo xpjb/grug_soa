@@ -40,11 +40,9 @@ pub struct MySoA {
     soa_ignored_field: String,
 }
 
-impl MySoA {
-    // Intentionally empty: `load_prototype` is provided via `LoadPrototype` impl below.
-}
-// you can have fields you choose not to register also (if other fields belonged in it)
 grug_soa::impl_load_prototype!(MySoA { foo: Foo, bar: Bar, baz: Baz, num: i32, name: String });
+
+// you can have fields you choose not to register also (if other fields belonged in it)
 // an alternative implementation could be like define_soa { foo bar baz etc }
 // but i think its more magic
 
