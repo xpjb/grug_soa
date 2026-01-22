@@ -8,8 +8,17 @@ This gets run at load time, to populate a SoA that holds 1 prototype per entity.
 
 Then for spawning at runtime you copy prototype 'i' into the runtime SoA
 
+# Update
+Storage indirection, so it can allow both Vec and Overlay types (and other potential types).
+
+Overlay is like sparse + CoW.
+
+Could imagine making a 'NeverRuntime' or just 'Sparse'.
+
+Is this the perfect idea? idk
+
 ## Todo
-probably more error handling etc, probably shouldnt crash the program if the user made a bad prototype but it should be a warning the user can handle
+Almost definitely more error handling etc, probably shouldnt crash the program if the user made a bad prototype but it should be a warning the user can handle
 
 Types should be Clone, Default, and Deserialize
 
